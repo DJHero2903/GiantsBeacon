@@ -1,2 +1,2 @@
 hidapi==0.14.0.post2
-Cython==3.0.10
+Cython==3.0.11
