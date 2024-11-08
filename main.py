@@ -10,15 +10,17 @@ from sys import exit
 
 def check_positive(value):
     # Ensure that the given duration is above -1.
-
+    
     try:
-        value = int(value)
-        if value <= 0:
-            raise ArgumentTypeError(f"""{value} is not a positive integer!""")
-    except ValueError:
-        raise Exception(f"{value} is not an integer!")
-    return value
+        x = int(value)
+  
+        if x >= 0:
+            return x
+        else:
+            raise ArgumentTypeError(f"{value} is not an integer >= 0.")
 
+    except ValueError:
+        raise ArgumentTypeError(f"\"{value}\" is not an integer.")
 
 def signal_handler(signal, frame) -> None:
     # On ctrl+c SIGINT signal, turn off beacon before program exit.
