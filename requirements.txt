@@ -1,2 +1,2 @@
 hidapi==0.15.0
-Cython==3.2.2
+Cython==3.2.3
